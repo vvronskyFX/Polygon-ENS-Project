@@ -21,7 +21,7 @@ import "hardhat/console.sol";
   mapping(string => address) public domains;
   mapping(string => string) public records; // Storing values here
 
-  constructor(string memory _tld) payable ERC721("Health Naming Service", "HNS") {
+  constructor(string memory _tld) payable ERC721("Digital Naming Service", "DNS") {
     tld = _tld;
     console.log("%s name service deployed", _tld);
   }
@@ -48,7 +48,7 @@ import "hardhat/console.sol";
             abi.encodePacked(
               '{"name": "',
               _name,
-              '", "description": "A domain on the Health Name Service", "image": "data:image/svg+xml;base64,',
+              '", "description": "A domain on the Digital Name Service", "image": "data:image/svg+xml;base64,',
               Base64.encode(bytes(finalSvg)),
               '","length":"',
               strLen,
